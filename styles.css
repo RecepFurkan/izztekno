@@ -1,0 +1,159 @@
+/* Özel Fontlar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Genel Stil Ayarları */
+body {
+    background: #000000; /*linear-gradient(135deg, #0f0f0f, #1e1e1e); /* Arka plan için degrade renk geçişi */
+    color: #e0e0e0; /* Yazı rengi */
+    font-family: 'Poppins', sans-serif; /* Özel font kullanımı */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out; /* Sayfa açıldığında yumuşak bir geçiş efekti */
+}
+
+/* Sayfa Açılış Animasyonu */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigasyon Çubuğu */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0); /* Şeffaf arka plan */
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölgelendirme */
+}
+
+/* Logo Alanı */
+.logo img {
+    padding: 4rem; /* Logonun çevresine boşluk bırakır */
+}
+
+/* İçerik Konteyneri */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.116); /* Şeffaf beyaz arka plan */
+    backdrop-filter: blur(10px); /* Cam efekti */
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Hafif gölgelendirme */
+}
+
+/* Başlık Ayarları */
+h1 {
+    color: #ff2e2e; /* Kırmızı başlık rengi */
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Paragraf Stili */
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #bbb; /* Açık gri metin rengi */
+}
+
+/* Form Alanı */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Etiketleri */
+label {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* İsim Soyisim Kutusu Boyutu */
+#isim {
+    width: 96%; /* Kutunun genişliğini %50 yapar */
+}
+
+/* Form Elemanları */
+input[type="text"], select, textarea {
+    width: 100%; /* Tüm form elemanlarının genişliği %100 olacak */
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid #444; /* Hafif kenar çizgisi */
+    background: #2c2c2c;
+    color: #e0e0e0;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Elemanları İçin Placeholder Rengi */
+input[type="text"]::placeholder, select::placeholder, textarea::placeholder {
+    color: #a0a0a0; /* Placeholder metin rengi */
+}
+
+/* Form Elemanlarının Odaklandığında Değişen Stili */
+input[type="text"]:focus, select:focus, textarea:focus {
+    background: #3a3a3a;
+    box-shadow: 0 0 10px rgba(255, 82, 82, 0.5);
+    border: 1px solid #ff5252; /* Kenar çizgisi rengi değişir */
+}
+
+/* Gönder Butonu */
+input[type="submit"] {
+    background: #ff5252;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Gönder Butonunun Üzerine Gelindiğinde */
+input[type="submit"]:hover {
+    background: #ff1744;
+    box-shadow: 0 4px 15px rgba(255, 82, 82, 0.4);
+    transform: scale(1.05); /* Butonun hafifçe büyümesi */
+}
+
+/* Alan Grupları */
+fieldset {
+    border: none;
+    margin-top: 20px;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Alan Grubu Başlığı */
+legend {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff5252;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Checkbox ve Radio Butonları */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #ff5252; /* Seçili olduğunda kırmızı renk */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        transition: all 0.3s ease-in-out;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+    }
+}

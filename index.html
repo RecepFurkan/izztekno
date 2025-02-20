@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okulda Teknoloji, Tasarım ve Elektronik İlgi Alanları Anketi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDigerAciklama() {
+            var digerCheckbox = document.getElementById('diger');
+            var digerAciklama = document.getElementById('diger-aciklama');
+            digerAciklama.style.display = digerCheckbox.checked ? 'inline' : 'none';
+        }
+
+        function toggleProjeAciklama() {
+            var evetProje = document.getElementById('evet');
+            var projeAciklama = document.getElementById('proje-aciklama');
+            var projeAciklamaLabel = document.getElementById('proje-aciklama-label');
+            projeAciklama.style.display = evetProje.checked ? 'block' : 'none';
+            projeAciklamaLabel.style.display = evetProje.checked ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Group.svg" alt="Okul Logo">
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Okulda Teknoloji, Tasarım ve Elektronik İlgi Alanları Anketi</h1>
+        <p>Bu anket, okulda yazılım, elektronik ve tasarım gibi alanlara ilgi duyan öğrencileri belirlemek amacıyla hazırlanmıştır. Lütfen ilgi alanlarınıza uygun seçenekleri işaretleyin.</p>
+        <form action="https://usebasin.com/f/027763cbd047" method="POST">
+            <label for="isim">İsim ve Soyisim:</label>
+            <input type="text" id="isim" name="isim" required>
+
+            <label for="sinif">Sınıfınız nedir?</label>
+            <select id="sinif" name="sinif" required>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <fieldset>
+                <legend>Hangi alanlara ilgi duyuyorsunuz?</legend>
+                <input type="checkbox" id="yazilim" name="ilgi-alanlari" value="Yazılım ve Programlama"> Yazılım ve Programlama<br>
+                <input type="checkbox" id="elektronik" name="ilgi-alanlari" value="Elektronik ve Robotik"> Elektronik ve Robotik<br>
+                <input type="checkbox" id="tasarim" name="ilgi-alanlari" value="Grafik Tasarım ve UI/UX"> Grafik Tasarım ve UI/UX<br>
+                <input type="checkbox" id="modelleme" name="ilgi-alanlari" value="3D Modelleme ve Oyun Geliştirme"> 3D Modelleme ve Oyun Geliştirme<br>
+                <input type="checkbox" id="siber-guvenlik" name="ilgi-alanlari" value="Siber Güvenlik"> Siber Güvenlik<br>
+                <input type="checkbox" id="yapay-zeka" name="ilgi-alanlari" value="Yapay Zeka ve Makine Öğrenmesi"> Yapay Zeka ve Makine Öğrenmesi<br>
+                <input type="checkbox" id="ilgi-yok" name="ilgi-alanlari" value="İlgi alanım yok"> İlgi alanım yok<br>
+                <input type="checkbox" id="diger" name="ilgi-alanlari" value="Diğer" onclick="toggleDigerAciklama()"> Diğer:
+                <input type="text" id="diger-aciklama" name="diger-aciklama" style="display:none;"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Bu alanlarda kendinizi hangi seviyede görüyorsunuz?</legend>
+                <input type="radio" id="yeni" name="seviye" value="Yeni başlıyorum" required> Yeni başlıyorum<br>
+                <input type="radio" id="orta" name="seviye" value="Orta düzeydeyim" required> Orta düzeydeyim<br>
+                <input type="radio" id="ileri" name="seviye" value="İleri seviyedeyim" required> İleri seviyedeyim<br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Daha önce bir proje yaptınız mı?</legend>
+                <input type="radio" id="evet" name="proje" value="Evet" required onclick="toggleProjeAciklama()"> Evet<br>
+                <input type="radio" id="hayir" name="proje" value="Hayır" required onclick="toggleProjeAciklama()"> Hayır<br>
+
+                <label id="proje-aciklama-label" for="proje-aciklama" style="display:none;">Bize projenizden biraz bahseder misiniz?</label>
+                <textarea id="proje-aciklama" name="proje-aciklama" rows="4" style="display:none;"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>TÜBİTAK, Deneyap vb. gibi projelere katılmak ister misiniz?</legend>
+                <input type="radio" id="evet-proje" name="yeni-projeler" value="Evet" required> Evet<br>
+                <input type="radio" id="hayir-proje" name="yeni-projeler" value="Hayır" required> Hayır<br>
+            </fieldset>
+
+            <input type="submit" value="Gönder">
+        </form>
+        <p>Teşekkürler! Bu anket, okul içinde bu alanlara ilgi duyan öğrencileri belirlemek için kullanılacaktır.</p>
+    </div>
+</body>
+</html>
