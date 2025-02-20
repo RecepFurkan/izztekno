@@ -152,8 +152,25 @@ input[type="checkbox"], input[type="radio"] {
         width: 95%;
         padding: 20px;
         transition: all 0.3s ease-in-out;
-    }
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+}
     input[type="submit"] {
         padding: 10px 20px;
+    }
+    input[type="text"], select, textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+    label {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
     }
 }
