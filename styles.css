@@ -166,7 +166,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* Mobil Uyumlu Tasarım */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     nav {
         width: auto;
@@ -177,6 +177,8 @@ input[type="checkbox"], input[type="radio"] {
     
     /* Logo Alanı */
     .logo img {
+        padding-left: 0;
+        padding-right: 0;
         padding-top: 4rem;/* Logonun çevresine boşluk bırakır */
     }
     .container {
