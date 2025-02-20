@@ -167,6 +167,18 @@ input[type="checkbox"], input[type="radio"] {
 
 /* Mobil Uyumlu Tasarım */
 @media (max-width: 600px) {
+
+    nav {
+        width: auto;
+        background: rgba(0, 0, 0, 0); /* Şeffaf arka plan */
+        display: flex;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hafif gölgelendirme */
+    }
+    
+    /* Logo Alanı */
+    .logo img {
+        padding-top: 4rem;/* Logonun çevresine boşluk bırakır */
+    }
     .container {
         width: 95%;
         padding: 20px;
