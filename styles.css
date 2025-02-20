@@ -151,12 +151,10 @@ input[type="checkbox"], input[type="radio"] {
     .container {
         width: 95%;
         padding: 20px;
+        margin: 0 auto; /* Ortalamak için margin ekliyoruz */
+        box-sizing: border-box; /* Padding ve border'ı genişliğe dahil eder */
         transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-}
+    }
     input[type="submit"] {
         padding: 10px 20px;
     }
