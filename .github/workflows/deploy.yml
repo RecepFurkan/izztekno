@@ -1,0 +1,23 @@
+name: Deploy PHP Site
+
+on:
+  push:
+    branches:
+      - main  # main branch’ine push yapıldığında çalışacak
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # İşlemi Ubuntu ortamında yap
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2  # Kodu repo’dan al
+
+      - name: Set up SSH for deployment
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # SSH anahtarını GitHub Secrets’e ekle
+
+      - name: Deploy to Server
+        run: |
+          ssh username@yourserver.com "cd /var/www/html && git pull origin main"  # Sunucuna bağlanıp repo'yu güncelle
