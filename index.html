@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./Plugin icon - 1.svg" type="image/x-icon" />
     <script>
+        // 'Diğer' seçeneği seçildiğinde açıklama alanını göster/gizle
         function toggleDigerAciklama() {
             var digerCheckbox = document.getElementById('diger');
             var digerAciklama = document.getElementById('diger-aciklama');
             digerAciklama.style.display = digerCheckbox.checked ? 'inline' : 'none';
         }
 
+        // 'Evet' seçeneği seçildiğinde proje açıklama alanını göster/gizle
         function toggleProjeAciklama() {
             var evetProje = document.getElementById('evet');
             var projeAciklama = document.getElementById('proje-aciklama');
@@ -68,6 +70,7 @@
                 <input type="radio" id="evet" name="proje" value="Evet" required onclick="toggleProjeAciklama()"> Evet<br>
                 <input type="radio" id="hayir" name="proje" value="Hayır" required onclick="toggleProjeAciklama()"> Hayır<br>
 
+                <!-- Proje açıklama alanı ve etiketi -->
                 <label id="proje-aciklama-label" for="proje-aciklama" style="display:none;">Bize projenizden biraz bahseder misiniz?</label>
                 <textarea id="proje-aciklama" name="proje-aciklama" rows="4" style="display:none;"></textarea>
             </fieldset>
@@ -81,6 +84,28 @@
             <input type="submit" value="Gönder">
         </form>
         <p>Teşekkürler! Bu anket, okul içinde bu alanlara ilgi duyan öğrencileri belirlemek için kullanılacaktır.</p>
+    </div>
+
+    <!-- Sosyal Medya İkonları -->
+    <div class="social-media">
+        <a href="https://discord.gg/bqAhJDHEdm" target="_blank" class="social-link">
+            <div class="social-icon">
+                <img src="./Discord.svg" alt="" width="30" height="30">
+            </div>
+            <span>./izztekno</span>
+        </a>
+        <a href="https://www.instagram.com/izztekno/" target="_blank" class="social-link">
+            <div class="social-icon">
+                <img src="./Instagram.svg" alt="" width="30" height="30">
+            </div>
+            <span>./izztekno</span>
+        </a>
+    </div>
+    <div style="height: 1rem;"></div>
+    <center>
+        <h4>Developed by <a href="https://www.instagram.com/rfb.dev/" target="_blank" style="text-decoration: none;text-decoration-line: none;"> RFB</a></h4>
+    </center>
+    <div style="height: 1rem;"></div>
     </div>
 </body>
 </html>
